@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Guest Organizer</string>
+
+    <string name="label_no_data">No data</string>
+    <string name="label_no_internet">No internet</string>
+    <string name="label_no_gmail_account">No gmail account found on this device.</string>
+
+    <string name="dialog_add_element_button">Next</string>
+    <string name="dialog_edit_status_title">Edit element status</string>
+    <string name="dialog_edit_status_hint">New Status</string>
+    <string name="dialog_button_confirm">OK</string>
+    <string name="dialog_button_cancel">Cancel</string>
+
+
+    <string name="menu_unlock_list_title">Change list into locked state</string>
+    <string name="menu_lock_list_title">Change list into unlocked state</string>
+    <string name="menu_new_element">Add new element into schedule</string>
+
+    <string name="add_element_action_bar_title">Add element</string>
+    <string name="edit_element_action_bar_title">Edit element</string>
+    <string name="hint_add_element_guest">Guest</string>
+    <string name="hint_add_element_description">Description</string>
+
+    <string name="firebase_add_element_success">Element added</string>
+    <string name="firebase_add_element_error">Adding element error</string>
+    <string name="firebase_remove_element_success">Element removed</string>
+    <string name="firebase_remove_element_error">Removing element error</string>
+    <string name="firebase_change_element_success">Changing element added</string>
+    <string name="firebase_change_element_error">Changing element error</string>
+
+    <string name="snack_bar_undo">Undo</string>
+
+    <string name="message_error_token_invalid">Google token is not valid. Try to resign.</string>
+    <string name="message_error_google">Google sign in exception</string>
+
+</resources>

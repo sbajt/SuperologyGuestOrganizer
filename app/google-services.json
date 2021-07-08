@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "302592090504",
+    "firebase_url": "https://superologyinvites-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "superologyinvites",
+    "storage_bucket": "superologyinvites.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302592090504:android:b42534d09564ec0b46da3d",
+        "android_client_info": {
+          "package_name": "com.superology.guestorganizer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302592090504-k8hb1jc5a22q9pe3422np4taa67otlo0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_noE5bNYp-wZyyv3k7jY2ZSSgi1-bV6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302592090504-k8hb1jc5a22q9pe3422np4taa67otlo0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
