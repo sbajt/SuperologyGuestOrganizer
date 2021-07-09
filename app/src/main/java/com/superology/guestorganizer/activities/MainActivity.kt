@@ -2,6 +2,7 @@ package com.superology.guestorganizer.activities
 
 import android.accounts.AccountManager
 import android.app.DatePickerDialog
+import android.app.NotificationManager
 import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
@@ -18,6 +19,8 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.messaging.FirebaseMessaging
+import com.scorealarm.functions.FunctionUtils
 import com.scorealarm.meeting.rooms.list.ListItemActionListener
 import com.superology.guestorganizer.R
 import com.superology.guestorganizer.data.DataService
@@ -27,6 +30,7 @@ import com.superology.guestorganizer.fragments.AddElementDialog
 import com.superology.guestorganizer.fragments.DialogActionListener
 import com.superology.guestorganizer.fragments.UpdateElementStatusDialog
 import com.superology.guestorganizer.list.ListAdapter
+import com.superology.guestorganizer.utils.NotificationUtils
 import com.superology.guestorganizer.utils.ActivityUtils
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -40,6 +44,7 @@ class MainActivity : AppCompatActivity(), ListItemActionListener<Element>, Dialo
     private val listAdapter = ListAdapter(this)
     private val accountManager: AccountManager by lazy { getSystemService(Context.ACCOUNT_SERVICE) as AccountManager }
     private val connectivityManager: ConnectivityManager by lazy { getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager }
+    private val notificationManager by lazy { getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager }
 
     private var isObservingData = false
     private lateinit var statusTextView: TextView
@@ -49,6 +54,15 @@ class MainActivity : AppCompatActivity(), ListItemActionListener<Element>, Dialo
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initViews()
+        NotificationUtils.init(this, notificationManager)
+        FunctionUtils.observeDb(this)
+        var token = ""
+        FirebaseMessaging.getInstance().token.addOnCompleteListener {
+            if(it.isSuccessful) {
+                token = it.result.toString()
+                Log.d(TAG, "Token: $token")
+            }
+        }
     }
 
     override fun onStart() {

@@ -33,4 +33,20 @@
     <string name="message_error_token_invalid">Google token is not valid. Try to resign.</string>
     <string name="message_error_google">Google sign in exception</string>
 
+    <string name="notification_service_title">Guest Organizer notification service</string>
+    <string name="notification_service_text">Guest Organizer notification service running</string>
+    <string name="notification_channel_id">guestorganizersuperology</string>
+    <string name="notification_topic">guestorganizersuperology</string>
+    <string name="notification_topic_success">Subscribed to topic</string>
+    <string name="notification_topic_error">Subscribe to topic failed</string>
+    <string name="notification_token_regenerated">New firebase token generated</string>
+    <string name="notification_upcoming_title">Coming %s in %d min</string>
+    <string name="notification_upcoming_text">%s is coming in office in %d min</string>
+    <string name="notification_change_element_title">Status title</string>
+    <string name="notification_change_element_text">Status text</string>
+    <string name="notification_error">Error while observing notification action subject</string>
+
+    <string name="firebase_function_data_change_success">Observing add element into DB function success</string>
+    <string name="firebase_function_data_change_error">Observing add element into DB function error in firebase</string>
+
 </resources>
